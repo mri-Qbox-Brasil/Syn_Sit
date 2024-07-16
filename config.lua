@@ -17,15 +17,15 @@ Config.AllowChairCamera = true -- The Camera is usefull for times when a player 
 
 
 Config.AddHelpText = true -- display help text
-Config.WhileSittingHelpText = "[W] - Stand Up    \n     [F] - Change camera   \n     [SPACEBAR] - Menu"
+Config.WhileSittingHelpText = "[W] - Ficar de pé    \n     [F] - Mudar Camera   \n     [ESPAÇO] - Menu"
 Config.WhileSittinginfoFunction = function() lib.showTextUI(Config.WhileSittingHelpText,{icon = 'fa-solid fa-chair'}) Citizen.SetTimeout(5000, function() if Config.WhileSittinginfoFunction_IsOpenCheck() then Config.WhileSittinginfoFunctionCancel() end end) end --or ShowHelpNotification(Config.WhileSittingHelpText) or your funtion 
 Config.WhileSittinginfoFunctionCancel =  function() lib.hideTextUI() end-- 
 Config.WhileSittinginfoFunction_IsOpenCheck =  function() local isOpen, text = lib.isTextUIOpen() return isOpen, text  end-- 
 
-Config.OxContextMenuTitle = "Seat Animations " -- Title of context menu leave space at end for Concate
-Config.OxContextName = 'Sit Position ' -- label of options in
-Config.OxContextLabel = 'Seating Options ' -- label of options in
-Config.OxTargetLabel = 'Seating Options ' 
+Config.OxContextMenuTitle = "Animações de assento " -- Title of context menu leave space at end for Concate
+Config.OxContextName = 'Posição de sentar ' -- label of options in
+Config.OxContextLabel = 'Opções de assentos' -- label of options in
+Config.OxTargetLabel = 'Sentar ' 
 
 
 Config.AllowHeadingChange = true -- change heading by pressing A and D 
@@ -38,33 +38,33 @@ Config.AnimDescriptions = { -- this is all you need to edit for translations
     --############################################# SCENARIO DESCRIPTIONS ######################################################
 
 
-	["PROP_HUMAN_SEAT_ARMCHAIR"] = { title = "Armchair Seating",  description = "Seating animation for armchairs."},
-	["PROP_HUMAN_SEAT_BAR"] = { title = "Bar Seating",  description = "Seating animation for bar stools."},
-	["PROP_HUMAN_SEAT_BENCH"] = { title = "Bench Seating",  description = "Seating animation for benches."},
-	["PROP_HUMAN_SEAT_BENCH_FACILITY"] = { title = "Facility Bench Seating",  description = "Seating animation for facility benches."},
-	["PROP_HUMAN_SEAT_BENCH_DRINK"] = { title = "Drink Bench Seating",  description = "Seating animation for benches with drinks."},
-	["PROP_HUMAN_SEAT_BENCH_DRINK_FACILITY"] = { title = "Drink Facility Bench Seating",  description = "Seating animation for facility benches with drinks."},
-	["PROP_HUMAN_SEAT_BENCH_DRINK_BEER"] = { title = "Beer Drink Bench Seating",  description = "Seating animation for benches with beer drinks."},
-	["PROP_HUMAN_SEAT_BENCH_FOOD"] = { title = "Food Bench Seating",  description = "Seating animation for benches with food."},
-	["PROP_HUMAN_SEAT_BENCH_FOOD_FACILITY"] = { title = "Facility Food Bench Seating",  description = "Seating animation for facility benches with food."},
-	["PROP_HUMAN_SEAT_BUS_STOP_WAIT"] = { title = "Bus Stop Waiting Seating",  description = "Seating animation for bus stop waiting areas."},
-	["PROP_HUMAN_SEAT_CHAIR"] = { title = "Chair Seating",  description = "Seating animation for chairs."},
-	["PROP_HUMAN_SEAT_CHAIR_DRINK"] = { title = "Drink Chair Seating",  description = "Seating animation for chairs with drinks."},
-	["PROP_HUMAN_SEAT_CHAIR_DRINK_BEER"] = { title = "Beer Drink Chair Seating",  description = "Seating animation for chairs with beer drinks."},
-	["PROP_HUMAN_SEAT_CHAIR_FOOD"] = { title = "Food Chair Seating",  description = "Seating animation for chairs with food."},
-	["PROP_HUMAN_SEAT_CHAIR_UPRIGHT"] = { title = "Upright Chair Seating",  description = "Seating animation for upright chairs."},
-	["PROP_HUMAN_SEAT_DECKCHAIR"] = { title = "Deckchair Seating",  description = "Seating animation for deckchairs."},
-	["PROP_HUMAN_SEAT_DECKCHAIR_DRINK"] = { title = "Drink Deckchair Seating",  description = "Seating animation for deckchairs with drinks."},
-	["PROP_HUMAN_SEAT_CHAIR_MP_PLAYER"] = { title = "Multiplayer Player Chair Seating",  description = "Seating animation for multiplayer player chairs."}, 
-	["PROP_HUMAN_SEAT_COMPUTER"] = { title = "Computer Seating",  description = "Seating animation for computer chairs."}, 
-	["PROP_HUMAN_SEAT_COMPUTER_LOW"] = { title = "Low Computer Seating",  description = "Seating animation for low computer chairs."}, 
-	["PROP_HUMAN_SEAT_SEWING"] = { title = "Sewing Seating",  description = "Seating animation for sewing chairs."}, 
-	["PROP_HUMAN_SEAT_STRIP_WATCH"] = { title = "Strip Watch Seating",  description = "Seating animation for strip watch areas."},
-	["PROP_HUMAN_SEAT_SUNLOUNGER"] = { title = "Sunlounger Seating",  description = "Seating animation for sunloungers."},
-	["WORLD_HUMAN_SEAT_LEDGE"] = { title = "Ledge Seating",  description = "Seating animation for ledges."},
-	["WORLD_HUMAN_SEAT_LEDGE_EATING"] = { title = "Eating Ledge Seating",  description = "Seating animation for ledges with eating activities."},
-	["WORLD_HUMAN_BUM_FREEWAY"] = {title = "Bum sleep",description = "Lay down ya bum."},
-	["WORLD_HUMAN_BUM_SLUMPED"] = {title = "Bum sit",description = "Relax down ya bum."},
+	["PROP_HUMAN_SEAT_ARMCHAIR"] = { title = "Assento de Poltrona",  description = "Animação de assento para poltronas."},
+	["PROP_HUMAN_SEAT_BAR"] = { title = "Assento de Bar",  description = "Animação de assento para bancos de bar."},
+	["PROP_HUMAN_SEAT_BENCH"] = { title = "Assento de Banco",  description = "Animação de assento para bancos."},
+	["PROP_HUMAN_SEAT_BENCH_FACILITY"] = { title = "Assento de Banco de Instalação",  description = "Animação de assento para bancos de instalações."},
+	["PROP_HUMAN_SEAT_BENCH_DRINK"] = { title = "Assento de Banco com Bebida",  description = "Animação de assento para bancos com bebidas."},
+	["PROP_HUMAN_SEAT_BENCH_DRINK_FACILITY"] = { title = "Assento de Banco de Instalação com Bebida",  description = "Animação de assento para bancos de instalações com bebidas."},
+	["PROP_HUMAN_SEAT_BENCH_DRINK_BEER"] = { title = "Assento de Banco com Bebida de Cerveja",  description = "Animação de assento para bancos com bebidas de cerveja."},
+	["PROP_HUMAN_SEAT_BENCH_FOOD"] = { title = "Assento de Banco com Comida",  description = "Animação de assento para bancos com comida."},
+	["PROP_HUMAN_SEAT_BENCH_FOOD_FACILITY"] = { title = "Assento de Banco de Instalação com Comida",  description = "Animação de assento para bancos de instalações com comida."},
+	["PROP_HUMAN_SEAT_BUS_STOP_WAIT"] = { title = "Assento de Espera de Parada de Ônibus",  description = "Animação de assento para áreas de espera de parada de ônibus."},
+	["PROP_HUMAN_SEAT_CHAIR"] = { title = "Assento de Cadeira",  description = "Animação de assento para cadeiras."},
+	["PROP_HUMAN_SEAT_CHAIR_DRINK"] = { title = "Assento de Cadeira com Bebida",  description = "Animação de assento para cadeiras com bebidas."},
+	["PROP_HUMAN_SEAT_CHAIR_DRINK_BEER"] = { title = "Assento de Cadeira com Bebida de Cerveja",  description = "Animação de assento para cadeiras com bebidas de cerveja."},
+	["PROP_HUMAN_SEAT_CHAIR_FOOD"] = { title = "Assento de Cadeira com Comida",  description = "Animação de assento para cadeiras com comida."},
+	["PROP_HUMAN_SEAT_CHAIR_UPRIGHT"] = { title = "Assento de Cadeira Vertical",  description = "Animação de assento para cadeiras verticais."},
+	["PROP_HUMAN_SEAT_DECKCHAIR"] = { title = "Assento de Cadeira de Convés",  description = "Animação de assento para cadeiras de convés."},
+	["PROP_HUMAN_SEAT_DECKCHAIR_DRINK"] = { title = "Assento de Cadeira de Convés com Bebida",  description = "Animação de assento para cadeiras de convés com bebidas."},
+	["PROP_HUMAN_SEAT_CHAIR_MP_PLAYER"] = { title = "Assento de Jogador Multiplayer em Cadeira",  description = "Animação de assento para cadeiras de jogador multiplayer."}, 
+	["PROP_HUMAN_SEAT_COMPUTER"] = { title = "Assento de Computador",  description = "Animação de assento para cadeiras de computador."}, 
+	["PROP_HUMAN_SEAT_COMPUTER_LOW"] = { title = "Assento Baixo de Computador",  description = "Animação de assento para cadeiras de computador baixas."}, 
+	["PROP_HUMAN_SEAT_SEWING"] = { title = "Assento de Costura",  description = "Animação de assento para cadeiras de costura."}, 
+	["PROP_HUMAN_SEAT_STRIP_WATCH"] = { title = "Assento de Observação de Strip",  description = "Animação de assento para áreas de observação de strip."},
+	["PROP_HUMAN_SEAT_SUNLOUNGER"] = { title = "Assento de Espreguiçadeira",  description = "Animação de assento para espreguiçadeiras."},
+	["WORLD_HUMAN_SEAT_LEDGE"] = { title = "Assento de Parapeito",  description = "Animação de assento para parapeitos."},
+	["WORLD_HUMAN_SEAT_LEDGE_EATING"] = { title = "Assento de Parapeito com Comida",  description = "Animação de assento para parapeitos com atividades de comer."},
+	["WORLD_HUMAN_BUM_FREEWAY"] = {title = "Bum dormindo",description = "Deita aí, vagabundo."},
+	["WORLD_HUMAN_BUM_SLUMPED"] = {title = "Bum sentado",description = "Relaxa aí, vagabundo."},	
 
 
     --############################################# SCENARIO DESCRIPTIONS ######################################################
@@ -702,8 +702,8 @@ Config.objects = {
 	},
 
 		multiSeat = {
-			"Right",
-			"Left",
+			"lado Direito",
+			"lado Esquerdo",
 		} 
 	},
 
@@ -730,8 +730,8 @@ Config.objects = {
 	},
 
 		multiSeat = {
-			"Right",
-			"Left",
+			"lado Direito",
+			"lado Esquerdo",
 		} 
 	},
 
@@ -757,8 +757,8 @@ Config.objects = {
 	},
 
 		multiSeat = {
-			"Right",
-			"Left",
+			"lado Direito",
+			"lado Esquerdo",
 		} 
 	},
 
@@ -785,8 +785,8 @@ Config.objects = {
 },
 
 	multiSeat = {
-		"Right",
-		"Left",
+		"lado Direito",
+		"lado Esquerdo",
 	}  
 },
 	{objName=-628719744, Animations = {
@@ -820,9 +820,9 @@ Config.objects = {
 		},
 		
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	{objName=1805980844, Animations = {
@@ -856,9 +856,9 @@ Config.objects = {
 		},
 		
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 
@@ -893,9 +893,9 @@ Config.objects = {
 		},
 		
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 
@@ -930,9 +930,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -967,9 +967,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1005,9 +1005,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1042,9 +1042,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1079,9 +1079,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1116,9 +1116,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1153,9 +1153,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1190,9 +1190,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1227,9 +1227,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1264,9 +1264,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1301,9 +1301,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1338,9 +1338,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1375,9 +1375,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1412,9 +1412,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1449,9 +1449,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1486,9 +1486,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1523,9 +1523,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1560,9 +1560,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1599,9 +1599,9 @@ Config.objects = {
         },
         
 			multiSeat = {
-				"Right",
-				"Center",
-				"Left",
+				"lado Direito",
+				"Centro",
+				"lado Esquerdo",
 			}  
         },
         
@@ -1636,9 +1636,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1673,9 +1673,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1710,9 +1710,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1747,9 +1747,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1785,9 +1785,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1822,9 +1822,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1859,9 +1859,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1896,9 +1896,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1933,9 +1933,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -1970,9 +1970,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2007,9 +2007,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2045,9 +2045,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2082,9 +2082,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2119,9 +2119,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2156,9 +2156,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2193,9 +2193,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2230,9 +2230,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2267,9 +2267,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2304,9 +2304,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	
@@ -2341,9 +2341,9 @@ Config.objects = {
 	},
 	
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 
@@ -2379,9 +2379,9 @@ Config.objects = {
 		},
 		
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 	{objName=-403891623, Animations = {
@@ -2415,9 +2415,9 @@ Config.objects = {
 		},
 		
 		multiSeat = {
-			"Right",
-			"Center",
-			"Left",
+			"lado Direito",
+			"Centro",
+			"lado Esquerdo",
 		} 
 	},
 
